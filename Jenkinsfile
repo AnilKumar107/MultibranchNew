@@ -13,10 +13,13 @@ pipeline {
        when 
        {
        branch "feature*"
+       }
+       steps
+       {
        echo " It is only for Feature branch"
        }
-       }
-      stage('Deploy Code') {
+       
+       stage('Deploy Code') {
           steps {
                sh """
                echo "Deploying Code"
