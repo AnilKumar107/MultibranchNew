@@ -10,7 +10,7 @@ pipeline {
        }
        stage('Reading branch wise')
        {
-       when 
+       when
        {
        branch "feature*"
        }
@@ -18,7 +18,8 @@ pipeline {
        {
        echo " It is only for Feature branch"
        }
-       
+       }
+
        stage('Deploy Code') {
           steps {
                sh """
@@ -26,5 +27,5 @@ pipeline {
                """
           }
       }
-   }
-}
+      }
+      }
